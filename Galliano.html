@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galliano</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #211610;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    background-color: #261913;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    gap: 35px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+.navbar a:hover {
+    color: #d6b27c;
+}
+.hero {
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        90deg,
+        #211610,
+        #39251b,
+        #211610
+    );
+}
+.hero-text {
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 300px;
+    z-index: 2;
+}
+.small-title {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #d6b27c;
+}
+.small-title.center {
+    text-align: center;
+}
+.hero-text h1 {
+    font-size: 65px;
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+.description {
+    color: #c5b8ae;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.hero-text button {
+    padding: 14px 30px;
+    border: none;
+    background-color: #c89a67;
+    color: #211610;
+    font-size: 16px;
+    cursor: pointer;
+}
+.hero-text button:hover {
+    background-color: #e3c9a8;
+}
+.hero-image {
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 35px rgba(33, 22, 16, 0.85));
+}
+.hero-image-caption {
+    position: absolute;
+    left: 8%;
+    top: 6%;
+    text-align: left;
+    z-index: 2;
+}
+.hero-image-caption h3 {
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+    color: #f1e9df;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+.hero-image-caption p {
+    font-size: 14px;
+    color: #d6b27c;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.hero-info {
+    position: absolute;
+    right: 8%;
+    top: 32%;
+    width: 280px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.06);
+    z-index: 2;
+}
+.hero-info h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero-info p {
+    color: #c5b8ae;
+    line-height: 1.6;
+}
+.social-icons {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+}
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #806a58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(30, 20, 15, 0.6);
+}
+.social-icons a:hover {
+    background-color: #c89a67;
+    color: #211610;
+}
+
+
+.products {
+    padding: 90px 8% 100px;
+    text-align: center;
+}
+.products-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+.product-card {
+    background-color: #261913;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.04);
+    border-color: #c89a67;
+    box-shadow: 0 0 30px rgba(200, 154, 103, 0.55);
+}
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+.product-name {
+    padding: 16px;
+    font-size: 16px;
+    color: #f1e9df;
+}
+
+@media (max-width: 1100px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer {
+    background-color: #1a110c;
+    padding: 70px 8% 30px;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 50px;
+}
+.footer-col h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #8a7c70;
+    margin-bottom: 22px;
+    font-weight: normal;
+}
+.footer-col a {
+    display: block;
+    color: #e8ded2;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    transition: color 0.2s ease;
+}
+.footer-col a:hover {
+    color: #c89a67;
+}
+.footer-newsletter p {
+    color: #c5b8ae;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+}
+.newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+.newsletter-form input::placeholder {
+    color: #8a7c70;
+}
+.newsletter-form button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 45px 0 25px;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer-bottom p {
+    color: #8a7c70;
+    font-size: 12px;
+}
+.footer-social {
+    display: flex;
+    gap: 25px;
+}
+.footer-social a {
+    color: #e8ded2;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+.footer-social a:hover {
+    color: #c89a67;
+}
+
+@media (max-width: 800px) {
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-newsletter {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 500px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    .footer-newsletter {
+        grid-column: span 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            Galliano
+        </div>
+        <nav class="navbar">
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Shop</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Log out</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <p class="small-title">
+                    NEW SEASON
+                </p>
+                <h1>
+                    Winter
+                    <br>
+                    Collection
+                </h1>
+                <p class="description">
+                    Discover our new winter collection,
+                    designed for comfort, elegance and
+                    modern style.
+                </p>
+                <button>
+                    Shop Now
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="winter.png" alt="Winter Collection">
+                <div class="hero-image-caption">
+                    <h3>Winter '26</h3>
+                    <p>Limited Edition</p>
+                </div>
+            </div>
+            <div class="hero-info">
+                <h2>
+                    Stay Warm,
+                    <br>
+                    Look Amazing
+                </h2>
+                <p>
+                    Explore our latest winter pieces
+                    made for cold days and elegant looks.
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="products">
+            <p class="small-title center">OUR COLLECTION</p>
+            <h2 class="products-title">Jackets & Coats</h2>
+
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <img src="1.jpg" alt="Product 1">
+                    <p class="product-name">Classic Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="2.jpg" alt="Product 2">
+                    <p class="product-name">Fur Collar Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="3.jpg" alt="Product 3">
+                    <p class="product-name">Brown Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="4.jpg" alt="Product 4">
+                    <p class="product-name">Long Fur Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="5.jpg" alt="Product 5">
+                    <p class="product-name">Biker Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="6.jpg" alt="Product 6">
+                    <p class="product-name">Beige Fur Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="7.jpg" alt="Product 7">
+                    <p class="product-name">Black Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="8.jpg" alt="Product 8">
+                    <p class="product-name">Elegant Fur Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="9.jpg" alt="Product 9">
+                    <p class="product-name">Suede Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="10.jpg" alt="Product 10">
+                    <p class="product-name">Winter Fur Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="11.jpg" alt="Product 11">
+                    <p class="product-name">Vintage Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="12.jpg" alt="Product 12">
+                    <p class="product-name">Grey Fur Coat</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="13.jpg" alt="Product 13">
+                    <p class="product-name">Cropped Leather Jacket</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="14.jpg" alt="Product 14">
+                    <p class="product-name">Oversized Fur Coat</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+
+            <div class="footer-col">
+                <h4>MAY WE HELP YOU?</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Size Guide</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>THE COMPANY</h4>
+                <a href="#">About Galliano</a>
+                <a href="#">Careers</a>
+                <a href="#">Legal</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h4>SIGN UP FOR UPDATES</h4>
+                <p>Get exclusive updates on new arrivals and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button type="submit" aria-label="Subscribe">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Galliano. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">X</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
