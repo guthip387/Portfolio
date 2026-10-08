@@ -105,12 +105,11 @@
 </head>
 <body class="h-screen w-screen overflow-hidden relative select-none bg-black">
 <!-- BEGIN: Desktop Wallpaper -->
-<!-- Using user provided Bliss reinterpreted pastel pink background -->
 <div class="absolute inset-0 bg-cover bg-center z-0" data-purpose="wallpaper-background" id="desktop-background" onclick="handleDesktopClick(event)" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBiLewduQ9anAkD4ySyVI4xhArngsECZTszp9QfXuXXYDK-ERwRVX9OIQnjGZCFYbi9z-cuLk3axN9xRbTtE2YHs4TTArUzvIs86G6luvv3IrNGDXfjNnMeyIuEhFwpMUMSiHWEx7qRijwHhzZfJpE-O8-URc0Vu1dAWa_yFcQadpP_a2wbWyHVacYesbSW7cy62Mif-2_QuJ0Y_BveL9f1ompT6CI1vbmWkFfzg0vcwpYrV1R9IVdU8DqUpiJMHbTqXJE&quot;); background-size: cover; background-position: center bottom; background-repeat: no-repeat; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0px);">
 <!-- Desktop watermark / header label -->
 <div class="absolute top-4 right-5 text-right pointer-events-none opacity-80">
 <h1 class="text-white text-base md:text-xl font-bold pixel-text tracking-wide">Lujain Abdrabou</h1>
-<p class="text-pink-100 text-xs pixel-text">AI & Cybersecurity Student | Front-End Developer</p>
+<p class="text-pink-100 text-xs pixel-text">AI &amp; Cybersecurity Student | Front-End Developer</p>
 </div>
 </div>
 <!-- END: Desktop Wallpaper -->
@@ -119,7 +118,6 @@
 <!-- Icon 1: About Me -->
 <div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-about" onclick="selectIcon(this); handleMobileTap('about-window')" ondblclick="openWindow('about-window')" tabindex="0">
 <div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
-<!-- SVG Folder Icon XP Pastel Style -->
 <svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
 <path d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V16C44,13.8,42.2,12,40,12z" fill="#FFA000"></path>
 <path d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v2h36v-2C40,12,40,12,40,12z" fill="#FFCA28"></path>
@@ -135,14 +133,27 @@
 <svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
 <path d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V16C44,13.8,42.2,12,40,12z" fill="#ec407a"></path>
 <path d="M44,18H4v18c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V18z" fill="#f48fb1"></path>
-<!-- Folder Badge/Code emblem -->
 <rect fill="#ffffff" height="8" opacity="0.9" rx="1.5" width="12" x="18" y="24"></rect>
 <path d="M22 26l-2 2 2 2m4-4l2 2-2 2" fill="#d81b60"></path>
 </svg>
 </div>
 <span class="text-xs text-white text-center font-medium mt-1 pixel-text leading-tight px-1 rounded group-hover:bg-blue-800/40">Projects</span>
 </div>
-<!-- Icon 3: My CV -->
+<!-- Icon 3: My Experience (NEW) -->
+<div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-experience" onclick="selectIcon(this); handleMobileTap('experience-window')" ondblclick="openWindow('experience-window')" tabindex="0">
+<div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
+<svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
+<path d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V16C44,13.8,42.2,12,40,12z" fill="#ab47bc"></path>
+<path d="M44,18H4v18c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V18z" fill="#f8bbd0"></path>
+<!-- Briefcase emblem -->
+<rect fill="#ffffff" height="10" rx="1.5" width="16" x="16" y="23"></rect>
+<path d="M21 23v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" fill="none" stroke="#ad1457" stroke-width="1.5"></path>
+<rect fill="#ec407a" height="1.5" width="16" x="16" y="27.5"></rect>
+</svg>
+</div>
+<span class="text-xs text-white text-center font-medium mt-1 pixel-text leading-tight px-1 rounded group-hover:bg-blue-800/40">Experience</span>
+</div>
+<!-- Icon 4: My CV -->
 <div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-cv" onclick="selectIcon(this); handleMobileTap('cv-window')" ondblclick="openWindow('cv-window')" tabindex="0">
 <div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
 <svg class="w-9 h-10 filter drop-shadow" viewBox="0 0 48 48">
@@ -156,20 +167,19 @@
 </div>
 <span class="text-xs text-white text-center font-medium mt-1 pixel-text leading-tight px-1 rounded group-hover:bg-blue-800/40">My CV</span>
 </div>
-<!-- Icon 4: Contact -->
+<!-- Icon 5: Contact -->
 <div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-contact" onclick="selectIcon(this); handleMobileTap('contact-window')" ondblclick="openWindow('contact-window')" tabindex="0">
 <div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
 <svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
 <path d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V16C44,13.8,42.2,12,40,12z" fill="#ffb74d"></path>
 <path d="M44,18H4v18c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V18z" fill="#ffe0b2"></path>
-<!-- Mail icon stamp -->
 <circle cx="33" cy="27" fill="#f06292" r="7"></circle>
 <path d="M29 25h8v4h-8zm0 0l4 2.5 4-2.5" fill="#ffffff"></path>
 </svg>
 </div>
 <span class="text-xs text-white text-center font-medium mt-1 pixel-text leading-tight px-1 rounded group-hover:bg-blue-800/40">Contact</span>
 </div>
-<!-- Icon 5: My Computer -->
+<!-- Icon 6: My Computer -->
 <div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-system" onclick="selectIcon(this); handleMobileTap('system-window')" ondblclick="openWindow('system-window')" tabindex="0">
 <div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
 <svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
@@ -181,14 +191,13 @@
 </div>
 <span class="text-xs text-white text-center font-medium mt-1 pixel-text leading-tight px-1 rounded group-hover:bg-blue-800/40">My Computer</span>
 </div>
-<!-- Icon 6: Recycle Bin -->
+<!-- Icon 7: Recycle Bin -->
 <div class="desktop-icon flex flex-col items-center justify-center w-20 p-1.5 rounded cursor-pointer hover:bg-pink-300/30 active:bg-pink-400/40 focus:outline-none transition group" data-purpose="icon-recycle" onclick="selectIcon(this); handleMobileTap('recycle-window')" ondblclick="openWindow('recycle-window')" tabindex="0">
 <div class="w-11 h-11 relative flex items-center justify-center drop-shadow-md">
 <svg class="w-10 h-10 filter drop-shadow" viewBox="0 0 48 48">
 <path d="M12 14h24l-3 26H15L12 14z" fill="#90CAF9"></path>
 <ellipse cx="24" cy="14" fill="#64B5F6" rx="12" ry="3"></ellipse>
 <path d="M15 14h18v2H15z" fill="#E3F2FD" opacity="0.6"></path>
-<!-- Recycled paper scraps -->
 <circle cx="21" cy="22" fill="#fff" r="2"></circle>
 <circle cx="27" cy="26" fill="#ffcdd2" r="3"></circle>
 </svg>
@@ -199,34 +208,30 @@
 <!-- END: Desktop Icons Layer -->
 <!-- BEGIN: Windows Layer -->
 <div class="absolute inset-0 pointer-events-none z-20 overflow-hidden" id="windows-container">
-<!-- ==================== 1. WELCOME DIALOG (Initial Modal) ==================== -->
-<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col" data-purpose="welcome-modal" id="welcome-dialog" style="width: 90%; max-width: 440px; top: 50%; left: 50%; transform: translate(-50%, -55%); z-index: 100;">
-<!-- Dialog Title Bar -->
-<div class="xp-titlebar h-8 px-2 flex items-center justify-between cursor-move select-none xp-titlebar-inactive">
+<!-- ==================== 1. WELCOME DIALOG (only window open on load) ==================== -->
+<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col" data-purpose="welcome-modal" id="welcome-dialog" onclick="bringToFront('welcome-dialog')" style="width: 90%; max-width: 440px; top: 50%; left: 50%; transform: translate(-50%, -55%); z-index: 100;">
+<div class="xp-titlebar h-8 px-2 flex items-center justify-between cursor-move select-none">
 <div class="flex items-center space-x-2">
 <span class="text-white text-xs font-bold tracking-wide flex items-center gap-1.5">
 <span class="inline-block w-3.5 h-3.5 rounded-full bg-pink-200 text-pink-700 text-[10px] flex items-center justify-center font-serif font-black">i</span>
-            Welcome to Lujain's Desktop
+            Welcome to Lujain's Portfolio
           </span>
 </div>
 <button class="xp-close-btn w-5 h-5 rounded flex items-center justify-center text-white font-bold text-xs" onclick="closeWindow('welcome-dialog')" title="Close">✕</button>
 </div>
-<!-- Dialog Body -->
 <div class="p-4 bg-[#fdf2f4] flex flex-col space-y-4">
 <div class="flex items-start space-x-3.5">
 <div class="flex-shrink-0 mt-1">
-<!-- XP Dialog Info Icon -->
 <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center text-white text-2xl font-serif font-bold shadow">
               i
             </div>
 </div>
 <div class="text-xs text-gray-800 leading-relaxed font-normal">
-<p class="font-bold text-pink-900 text-sm mb-1">Hi! I'm Lujain Abdrabou</p>
-<p class="text-gray-700">AI &amp; Cybersecurity student and Front-End Developer.</p>
-<p class="mt-1 text-gray-600">Welcome to my digital desktop portfolio. Double-click or tap any folder on the desktop to explore my work, CV, and contacts!</p>
+<p class="font-bold text-pink-900 text-sm mb-1">Welcome to Lujain's Portfolio</p>
+<p class="text-gray-700">Hi! I'm Lujain Abdrabou, an AI &amp; Cybersecurity student and Front-End Developer.</p>
+<p class="mt-1 text-gray-600">Double-click or tap any folder on the desktop to explore my work, experience, CV, and contacts!</p>
 </div>
 </div>
-<!-- Buttons row -->
 <div class="flex justify-end items-center pt-2 border-t border-pink-200">
 <button class="xp-btn px-5 py-1.5 text-xs text-pink-950 font-bold rounded cursor-pointer" onclick="closeWindow('welcome-dialog')">
             Enter Desktop
@@ -234,10 +239,10 @@
 </div>
 </div>
 </div>
-<!-- ==================== 2. ABOUT ME WINDOW ==================== -->
-<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col" data-purpose="window-about" id="about-window" onclick="bringToFront('about-window')" style="width: 92%; max-width: 580px; top: 12%; left: 5%; z-index: 36;">
-<!-- Title Bar -->
-<div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none">
+
+<!-- ==================== 2. ABOUT ME WINDOW (hidden on load) ==================== -->
+<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-about" id="about-window" onclick="bringToFront('about-window')" style="width: 92%; max-width: 580px; top: 12%; left: 5%; z-index: 36;">
+<div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
 <span class="text-sm">📁</span>
 <span class="text-white text-xs font-bold truncate">About Lujain - Windows Explorer</span>
@@ -248,7 +253,6 @@
 <button class="xp-close-btn w-5 h-5 rounded flex items-center justify-center text-white text-xs font-bold" onclick="closeWindow('about-window')">✕</button>
 </div>
 </div>
-<!-- Explorer Menu & Address Bar -->
 <div class="bg-[#fce4ec] px-2 py-1 text-xs border-b border-pink-300 text-gray-700 flex items-center space-x-3">
 <span class="hover:underline cursor-pointer">File</span>
 <span class="hover:underline cursor-pointer">Edit</span>
@@ -262,9 +266,7 @@
           C:\Lujain\About_Me
         </div>
 </div>
-<!-- Window Content -->
 <div class="p-4 bg-[#fffafc] overflow-y-auto max-h-[68vh] text-xs space-y-4">
-<!-- Profile Banner -->
 <div class="bg-gradient-to-r from-pink-100 to-rose-50 border border-pink-200 rounded p-3.5 flex items-center space-x-3">
 <div class="w-14 h-14 rounded-full bg-pink-300 border-2 border-white shadow-sm flex items-center justify-center text-2xl flex-shrink-0">
             👩‍💻
@@ -278,7 +280,7 @@
 <div class="mt-2 space-y-1 text-[11px]">
     <p>
         <span class="font-semibold text-gray-700">Phone:</span>
-        <a href="tel:+201121242 class="text-pink-600 hover:underline">
+        <a href="tel:+201121002402" class="text-pink-600 hover:underline">
             +20 11 2100 2402
         </a>
     </p>
@@ -299,14 +301,12 @@
 </p>
 </div>
 </div>
-<!-- Bio Paragraph -->
 <div class="space-y-2 text-gray-800">
 <p class="font-bold text-pink-800 uppercase tracking-wider text-[11px]">Overview</p>
 <div class="bg-white p-3 border border-pink-200 rounded leading-relaxed shadow-sm">
             I’m an AI and Cybersecurity student with an interest in Front-End Development, UI/UX Design, and Artificial Intelligence. I enjoy creating clean and responsive websites while continuously developing my technical skills. I also work with Python and C# and have experience with AI and cybersecurity projects.
           </div>
 </div>
-<!-- Technical Skills Badges -->
 <div>
 <p class="font-bold text-pink-800 uppercase tracking-wider text-[11px] mb-2">Technical Skills &amp; Focus Areas</p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -320,15 +320,15 @@
 <div class="xp-btn py-1.5 px-2 rounded text-center font-medium text-pink-950 text-xs">Front-End Dev</div>
 </div>
 </div>
-<!-- Status footer note -->
 <div class="border-t border-pink-200 pt-2 flex justify-between text-gray-500 text-[11px]">
 <span class="">8 items selected</span>
 <span class="">Local Workstation</span>
 </div>
 </div>
 </div>
-<!-- ==================== 3. PROJECTS WINDOW ==================== -->
-<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col" data-purpose="window-projects" id="projects-window" onclick="bringToFront('projects-window')" style="width: 92%; max-width: 620px; top: 123.75px; left: 31.225px; z-index: 33; transform: none;">
+
+<!-- ==================== 3. PROJECTS WINDOW (hidden on load) ==================== -->
+<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-projects" id="projects-window" onclick="bringToFront('projects-window')" style="width: 92%; max-width: 620px; top: 18%; left: 8%; z-index: 33;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
 <span class="text-sm">📁</span>
@@ -340,18 +340,15 @@
 <button class="xp-close-btn w-5 h-5 rounded flex items-center justify-center text-white text-xs font-bold" onclick="closeWindow('projects-window')">✕</button>
 </div>
 </div>
-<!-- Address Bar -->
 <div class="bg-[#fce4ec] px-2 py-1 flex items-center space-x-2 border-b border-pink-300 text-xs">
 <span class="text-pink-800 font-medium">Address</span>
 <div class="bg-white border border-pink-400 px-2 py-0.5 rounded-sm flex-1 text-gray-700 text-xs truncate">
           C:\Lujain\Projects
         </div>
 </div>
-<!-- Content Area -->
 <div class="p-4 bg-[#fffafc] overflow-y-auto max-h-[68vh] text-xs">
 <p class="text-gray-600 mb-3 italic">Double-click or tap a project folder to inspect details.</p>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-<!-- Project 1: Galliano (Double clickable) -->
 <div class="flex flex-col items-center p-3 rounded border border-pink-200 hover:border-pink-500 hover:bg-pink-100/50 cursor-pointer transition text-center group" onclick="openWindow('galliano-window')" ondblclick="openWindow('galliano-window')" title="Open Galliano details">
 <div class="w-14 h-12 relative flex items-center justify-center">
 <svg class="w-12 h-12 filter drop-shadow" viewBox="0 0 48 48">
@@ -363,7 +360,6 @@
 <span class="font-bold text-gray-800 mt-1">📁 Galliano</span>
 <span class="text-[10px] text-pink-700 mt-0.5">Front-End Project</span>
 </div>
-<!-- Future Project Placeholder Slot -->
 <div class="flex flex-col items-center justify-center p-3 rounded border-2 border-dashed border-pink-300 bg-pink-50/40 text-center opacity-75">
 <span class="text-2xl text-pink-300">📂</span>
 <span class="font-semibold text-gray-500 mt-1 text-[11px]">+ Future Project</span>
@@ -375,6 +371,7 @@
         </div>
 </div>
 </div>
+
 <!-- ==================== 4. GALLIANO PROJECT DETAILS WINDOW ==================== -->
 <div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-project-galliano" id="galliano-window" onclick="bringToFront('galliano-window')" style="width: 92%; max-width: 520px; top: 16%; left: 12%;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
@@ -410,22 +407,69 @@
 <span class="bg-pink-100 border border-pink-300 text-pink-800 px-2 py-0.5 rounded text-[11px]">Font Awesome</span>
 </div>
 </div>
-<!-- Action Buttons -->
 <div class="pt-3 border-t border-pink-200 flex flex-wrap gap-2">
-<!-- Placeholder URL: Live Demo -->
 <a class="xp-btn px-4 py-1.5 text-xs text-pink-950 font-bold rounded flex items-center space-x-1" href="Galliano.html" rel="noopener noreferrer" target="_blank" title="Live Project URL">
 <span class="">🔗</span>
 <span class="">View Live Project</span>
 </a>
-<!-- Placeholder URL: GitHub Repo -->
-<a class="xp-btn px-4 py-1.5 text-xs text-pink-950 font-bold rounded flex items-center space-x-1" href="https://www.linkedin.com/in/lujain-kamel" rel="noopener noreferrer" target="_blank" title="GitHub Repository URL">
+<a class="xp-btn px-4 py-1.5 text-xs text-pink-950 font-bold rounded flex items-center space-x-1" href="https://github.com/guthip387" rel="noopener noreferrer" target="_blank" title="GitHub Repository URL">
 <span class="">🐙</span>
 <span class="">View GitHub</span>
 </a>
 </div>
 </div>
 </div>
-<!-- ==================== 5. MY CV WINDOW ==================== -->
+
+<!-- ==================== 5. MY EXPERIENCE WINDOW (NEW) ==================== -->
+<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-experience" id="experience-window" onclick="bringToFront('experience-window')" style="width: 92%; max-width: 560px; top: 14%; left: 8%;">
+<div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
+<div class="flex items-center space-x-1.5 overflow-hidden">
+<span class="text-sm">💼</span>
+<span class="text-white text-xs font-bold truncate">My Experience - Windows Explorer</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="xp-control-btn w-5 h-5 rounded flex items-center justify-center text-xs font-bold text-gray-800" onclick="minimizeWindow('experience-window')">_</button>
+<button class="xp-control-btn w-5 h-5 rounded flex items-center justify-center text-xs font-bold text-gray-800" onclick="toggleMaximize('experience-window')">□</button>
+<button class="xp-close-btn w-5 h-5 rounded flex items-center justify-center text-white text-xs font-bold" onclick="closeWindow('experience-window')">✕</button>
+</div>
+</div>
+<div class="bg-[#fce4ec] px-2 py-1 flex items-center space-x-2 border-b border-pink-300 text-xs">
+<span class="text-pink-800 font-medium">Address</span>
+<div class="bg-white border border-pink-400 px-2 py-0.5 rounded-sm flex-1 text-gray-700 text-xs truncate">
+          C:\Lujain\Experience
+        </div>
+</div>
+<div class="p-4 bg-[#fffafc] overflow-y-auto max-h-[68vh] text-xs space-y-4">
+<p class="font-bold text-pink-800 uppercase tracking-wider text-[11px]">Experience</p>
+<div class="bg-white border border-pink-200 rounded shadow-sm p-3.5 space-y-3">
+<div class="flex items-start space-x-3">
+<div class="w-11 h-11 rounded bg-gradient-to-br from-pink-300 to-rose-400 border border-white shadow-sm flex items-center justify-center text-xl flex-shrink-0">💼</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm text-pink-950 leading-snug">Front-End Development Trainee</h3>
+<p class="text-pink-700 font-semibold mt-0.5 leading-snug">Digital Egypt Pioneers Initiative (DEPI)</p>
+<p class="text-gray-600 leading-snug">Egypt's Ministry of Communications and Information Technology (MCIT)</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-pink-100 border border-pink-300 text-pink-800 px-2 py-0.5 rounded text-[11px]">📅 2026 – Present</span>
+<span class="bg-pink-100 border border-pink-300 text-pink-800 px-2 py-0.5 rounded text-[11px]">Trainee</span>
+</div>
+<ul class="space-y-2 text-gray-800 leading-relaxed">
+<li class="flex items-start space-x-2"><span class="text-pink-500 flex-shrink-0">▸</span><span>Developing responsive and user-friendly web interfaces using HTML5, CSS3, and Bootstrap</span></li>
+<li class="flex items-start space-x-2"><span class="text-pink-500 flex-shrink-0">▸</span><span>Applying front-end development principles to build structured and responsive web pages</span></li>
+<li class="flex items-start space-x-2"><span class="text-pink-500 flex-shrink-0">▸</span><span>Developing practical skills through hands-on projects, technical assignments, and team-based activities</span></li>
+<li class="flex items-start space-x-2"><span class="text-pink-500 flex-shrink-0">▸</span><span>Strengthening knowledge of responsive design, UI implementation, web layouts, and user experience</span></li>
+<li class="flex items-start space-x-2"><span class="text-pink-500 flex-shrink-0">▸</span><span>Developing professional skills in teamwork, communication, presentation, and time management</span></li>
+</ul>
+</div>
+<div class="border-t border-pink-200 pt-2 flex justify-between text-gray-500 text-[11px]">
+<span class="">1 item</span>
+<span class="">Local Workstation</span>
+</div>
+</div>
+</div>
+
+<!-- ==================== 6. MY CV WINDOW ==================== -->
 <div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-cv" id="cv-window" onclick="bringToFront('cv-window')" style="width: 92%; max-width: 520px; top: 15%; left: 10%;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
@@ -445,7 +489,6 @@
         </div>
 </div>
 <div class="p-4 bg-[#fffafc] overflow-y-auto max-h-[68vh] text-xs space-y-4">
-<!-- PDF Document Item Preview Card -->
 <div class="border border-pink-200 bg-white p-4 rounded shadow-sm flex flex-col sm:flex-row items-center sm:space-x-4 space-y-3 sm:space-y-0">
 <div class="w-14 h-16 bg-rose-50 border border-rose-300 rounded flex flex-col items-center justify-center flex-shrink-0 shadow-inner">
 <span class="text-rose-600 text-xs font-black">PDF</span>
@@ -457,25 +500,20 @@
 <p class="text-gray-500 text-xs">Size: ~240 KB • Status: Ready to view</p>
 </div>
 </div>
-<!-- Action Buttons -->
 <div class="flex flex-wrap gap-2.5 pt-1">
-<!-- CV target placeholder link -->
 <a class="xp-btn px-4 py-1.5 text-xs text-pink-950 font-bold rounded flex items-center space-x-1.5" href="CV.pdf" target="_blank">
 <span class="">📄</span>
 <span class="">Open CV</span>
 </a>
-<!-- CV download placeholder link -->
 <a class="xp-btn px-4 py-1.5 text-xs text-pink-950 font-bold rounded flex items-center space-x-1.5" download="CV.pdf" href="CV.pdf">
 <span class="">💾</span>
 <span class="">Download CV</span>
 </a>
 </div>
-<div class="p-2.5 bg-pink-100/60 rounded border border-pink-300 text-[11px] text-pink-900 leading-relaxed">
-         
-        </div>
 </div>
 </div>
-<!-- ==================== 6. CONTACT WINDOW ==================== -->
+
+<!-- ==================== 7. CONTACT WINDOW ==================== -->
 <div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-contact" id="contact-window" onclick="bringToFront('contact-window')" style="width: 92%; max-width: 500px; top: 18%; left: 7%;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
@@ -496,9 +534,7 @@
 </div>
 <div class="p-4 bg-[#fffafc] overflow-y-auto max-h-[68vh] text-xs space-y-4">
 <p class="text-gray-700">Feel free to connect or reach out for opportunities and collaborations:</p>
-<!-- 4 Retro Contact Cards -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-<!-- LinkedIn -->
 <a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="https://www.linkedin.com/in/lujain-kamel" rel="noopener noreferrer" target="_blank">
 <div class="w-8 h-8 rounded bg-[#0077B5] text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
               in
@@ -508,8 +544,7 @@
 <span class="text-gray-500 text-[11px] truncate block">https://www.linkedin.com/in/lujain-kamel</span>
 </div>
 </a>
-<!-- GitHub -->
-<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="https://github.com/username" rel="noopener noreferrer" target="_blank">
+<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="https://github.com/guthip387" rel="noopener noreferrer" target="_blank">
 <div class="w-8 h-8 rounded bg-[#24292e] text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
               🐙
             </div>
@@ -518,18 +553,16 @@
 <span class="text-gray-500 text-[11px] truncate block">https://github.com/guthip387</span>
 </div>
 </a>
-<!-- Email -->
-<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="mailto:lujain@example.com">
+<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="mailto:lujainkamel66@gmail.com">
 <div class="w-8 h-8 rounded bg-rose-500 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
               ✉
             </div>
 <div class="truncate">
 <span class="font-bold text-pink-900 block group-hover:underline">Email</span>
-<span class="text-gray-500 text-[11px] truncate block">lujain@example.com</span>
+<span class="text-gray-500 text-[11px] truncate block">lujainkamel66@gmail.com</span>
 </div>
 </a>
-<!-- Phone -->
-<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="tel:+1234567890">
+<a class="flex items-center space-x-3 p-2.5 bg-white border border-pink-200 rounded hover:bg-pink-100/50 transition group" href="tel:+201121002402">
 <div class="w-8 h-8 rounded bg-pink-500 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
               📞
             </div>
@@ -541,7 +574,8 @@
 </div>
 </div>
 </div>
-<!-- ==================== 7. MY COMPUTER / SYSTEM PROPERTIES ==================== -->
+
+<!-- ==================== 8. MY COMPUTER / SYSTEM PROPERTIES ==================== -->
 <div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-system" id="system-window" onclick="bringToFront('system-window')" style="width: 92%; max-width: 480px; top: 15%; left: 9%;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
@@ -581,7 +615,8 @@
 </div>
 </div>
 </div>
-<!-- ==================== 8. RECYCLE BIN WINDOW ==================== -->
+
+<!-- ==================== 9. RECYCLE BIN WINDOW ==================== -->
 <div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="window-recycle" id="recycle-window" onclick="bringToFront('recycle-window')" style="width: 90%; max-width: 420px; top: 20%; left: 15%;">
 <div class="xp-titlebar h-8 px-2 flex items-center justify-between select-none xp-titlebar-inactive">
 <div class="flex items-center space-x-1.5 overflow-hidden">
@@ -601,11 +636,35 @@
 </div>
 </div>
 </div>
+
+<!-- ==================== 10. THANK-YOU MESSAGE (shown after closing About Me / Experience) ==================== -->
+<div class="xp-window pointer-events-auto absolute bg-[#ece9d8] rounded-t-lg shadow-2xl flex flex-col hidden" data-purpose="message-modal" id="message-dialog" onclick="bringToFront('message-dialog')" style="width: 90%; max-width: 400px; top: 50%; left: 50%; transform: translate(-50%, -55%); z-index: 200;">
+<div class="xp-titlebar h-8 px-2 flex items-center justify-between cursor-move select-none">
+<span class="text-white text-xs font-bold tracking-wide flex items-center gap-1.5">
+<span class="inline-block w-3.5 h-3.5 rounded-full bg-pink-200 text-pink-700 text-[10px] flex items-center justify-center font-serif font-black">i</span>
+<span id="message-title">Message</span>
+</span>
+<button class="xp-close-btn w-5 h-5 rounded flex items-center justify-center text-white font-bold text-xs" onclick="closeWindow('message-dialog')" title="Close">✕</button>
+</div>
+<div class="p-4 bg-[#fdf2f4] flex flex-col space-y-4">
+<div class="flex items-start space-x-3.5">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center text-white text-2xl font-serif font-bold shadow">i</div>
+</div>
+<div class="text-xs text-gray-800 leading-relaxed">
+<p class="font-bold text-pink-900 text-sm mb-1" id="message-heading">Thank you!</p>
+<p class="text-gray-700" id="message-text"></p>
+</div>
+</div>
+<div class="flex justify-end items-center pt-2 border-t border-pink-200">
+<button class="xp-btn px-5 py-1.5 text-xs text-pink-950 font-bold rounded cursor-pointer" onclick="closeWindow('message-dialog')">OK</button>
+</div>
+</div>
+</div>
 </div>
 <!-- END: Windows Layer -->
 <!-- BEGIN: Start Menu Popup -->
 <div class="xp-window absolute bottom-10 left-0 w-72 sm:w-80 bg-white rounded-t-lg shadow-2xl z-50 hidden flex-col overflow-hidden" data-purpose="xp-start-menu" id="start-menu">
-<!-- Start Menu Header -->
 <div class="xp-titlebar p-2.5 flex items-center space-x-3 text-white xp-titlebar-inactive">
 <div class="w-10 h-10 rounded-full border-2 border-white bg-pink-300 flex items-center justify-center text-xl shadow">
         👩‍💻
@@ -615,9 +674,7 @@
 <span class="text-[11px] text-pink-100 block truncate">Developer &amp; AI Student</span>
 </div>
 </div>
-<!-- Start Menu Dual Columns -->
 <div class="grid grid-cols-2 bg-white text-xs">
-<!-- Left Column (Programs/Folders) -->
 <div class="p-2 space-y-1 border-r border-pink-100">
 <button class="w-full text-left p-1.5 rounded hover:bg-pink-100/70 flex items-center space-x-2" onclick="openWindow('about-window'); toggleStartMenu();">
 <span class="">📁</span>
@@ -626,6 +683,10 @@
 <button class="w-full text-left p-1.5 rounded hover:bg-pink-100/70 flex items-center space-x-2" onclick="openWindow('projects-window'); toggleStartMenu();">
 <span class="">📂</span>
 <span class="font-semibold text-gray-800">Projects</span>
+</button>
+<button class="w-full text-left p-1.5 rounded hover:bg-pink-100/70 flex items-center space-x-2" onclick="openWindow('experience-window'); toggleStartMenu();">
+<span class="">💼</span>
+<span class="font-semibold text-gray-800">Experience</span>
 </button>
 <button class="w-full text-left p-1.5 rounded hover:bg-pink-100/70 flex items-center space-x-2" onclick="openWindow('cv-window'); toggleStartMenu();">
 <span class="">📄</span>
@@ -636,7 +697,6 @@
 <span class="font-semibold text-gray-800">Contact</span>
 </button>
 </div>
-<!-- Right Column (System / Pink Tinted) -->
 <div class="bg-[#fce4ec] p-2 space-y-1">
 <button class="w-full text-left p-1.5 rounded hover:bg-pink-200 flex items-center space-x-2" onclick="openWindow('system-window'); toggleStartMenu();">
 <span class="">🖥</span>
@@ -657,7 +717,6 @@
 </div>
 </div>
 </div>
-<!-- Start Menu Bottom Bar -->
 <div class="bg-[#d81b60] p-1.5 px-3 flex justify-between items-center text-white text-xs">
 <button class="hover:underline flex items-center space-x-1" onclick="toggleStartMenu()">
 <span class="">🔒</span>
@@ -672,23 +731,17 @@
 <!-- END: Start Menu Popup -->
 <!-- BEGIN: Taskbar -->
 <footer class="xp-taskbar absolute bottom-0 left-0 right-0 h-10 z-40 flex items-center justify-between select-none" data-purpose="xp-taskbar" id="taskbar">
-<!-- Left: Start Button + Open Window Tabs -->
 <div class="flex items-center h-full space-x-1 overflow-x-auto flex-1">
-<!-- Glossy Start Button -->
 <button class="xp-start-btn h-full px-3.5 flex items-center space-x-1.5 text-white font-black italic text-sm tracking-wide flex-shrink-0" data-purpose="start-menu-button" id="start-button" onclick="toggleStartMenu()">
-<!-- XP Flag graphic re-colored pink -->
 <span class="text-pink-200 text-base drop-shadow">❖</span>
 <span class="drop-shadow-sm font-sans">start</span>
 </button>
-<!-- Active Window Tabs Container -->
-<div class="flex items-center space-x-1 px-1 h-full flex-1 overflow-x-auto" id="taskbar-tabs"><button class="h-7 px-2.5 rounded-sm flex items-center space-x-1.5 text-xs truncate max-w-[140px] border transition bg-[#f48fb1] text-pink-950 border-pink-400 hover:bg-[#ff80ab]"><span class="">ℹ️</span><span class="truncate font-medium">Welcome</span></button><button class="h-7 px-2.5 rounded-sm flex items-center space-x-1.5 text-xs truncate max-w-[140px] border transition bg-[#f48fb1] text-pink-950 border-pink-400 hover:bg-[#ff80ab]"><span class="">📁</span><span class="truncate font-medium">About Lujain</span></button><button class="h-7 px-2.5 rounded-sm flex items-center space-x-1.5 text-xs truncate max-w-[140px] border transition bg-[#f48fb1] text-pink-950 border-pink-400 hover:bg-[#ff80ab]"><span class="">📂</span><span class="truncate font-medium">Projects</span></button></div>
+<!-- Tabs are generated by updateTaskbar() -->
+<div class="flex items-center space-x-1 px-1 h-full flex-1 overflow-x-auto" id="taskbar-tabs"></div>
 </div>
-<!-- Right: System Tray (Clock, Network, Sound) -->
 <div class="bg-[#ad1457] h-full px-3 flex items-center space-x-2.5 text-white border-l border-pink-300 shadow-inner flex-shrink-0">
-<!-- Retro Icons -->
 <span class="text-xs opacity-90 cursor-pointer" title="Volume">🔊</span>
 <span class="text-xs opacity-90 cursor-pointer" title="Network Active">📶</span>
-<!-- Real-time Digital Clock -->
 <span class="text-xs font-semibold tracking-wider font-mono" id="system-clock">09:44 AM</span>
 </div>
 </footer>
@@ -696,19 +749,52 @@
 <!-- BEGIN: Vanilla JavaScript for Retro OS Interactivity -->
 <script data-purpose="desktop-runtime">
     // Global z-index tracker for window focus
-    let highestZ = 30;
+    let highestZ = 300;
 
-    // Track active windows for taskbar syncing
+    // Track windows for taskbar syncing
     const windowRegistry = {
       'welcome-dialog': { title: 'Welcome', icon: 'ℹ️' },
       'about-window': { title: 'About Lujain', icon: '📁' },
       'projects-window': { title: 'Projects', icon: '📂' },
       'galliano-window': { title: 'Galliano Project', icon: '🌐' },
+      'experience-window': { title: 'My Experience', icon: '💼' },
       'cv-window': { title: 'My CV', icon: '📄' },
       'contact-window': { title: 'Contact Lujain', icon: '📇' },
       'system-window': { title: 'System Properties', icon: '🖥' },
-      'recycle-window': { title: 'Recycle Bin', icon: '🗑' }
+      'recycle-window': { title: 'Recycle Bin', icon: '🗑' },
+      'message-dialog': { title: 'Message', icon: 'ℹ️' }
     };
+
+    // Messages shown after closing specific windows
+    const closeMessages = {
+      'about-window': {
+        title: 'Thank you!',
+        heading: 'Thanks for getting to know me!',
+        text: "I hope you enjoyed learning about me. Take a look at my Experience and Projects next, or get in touch from the Contact folder."
+      },
+      'experience-window': {
+        title: 'Thank you!',
+        heading: 'Thanks for checking my experience!',
+        text: "I'm always learning and growing. Explore my Projects, download my CV, or reach out through the Contact folder."
+      }
+    };
+
+    // Show the thank-you message dialog (centered, always on top)
+    function showMessage(windowId) {
+      const msg = closeMessages[windowId];
+      const dialog = document.getElementById('message-dialog');
+      if (!msg || !dialog) return;
+
+      document.getElementById('message-title').textContent = msg.title;
+      document.getElementById('message-heading').textContent = msg.heading;
+      document.getElementById('message-text').textContent = msg.text;
+
+      // Reset to centered position in case it was dragged before
+      dialog.style.left = '50%';
+      dialog.style.top = '50%';
+      dialog.style.transform = 'translate(-50%, -55%)';
+      openWindow('message-dialog');
+    }
 
     // Open a specified window and add to taskbar
     function openWindow(windowId) {
@@ -720,13 +806,17 @@
       updateTaskbar();
     }
 
-    // Close a specified window
+    // Close a specified window (shows a thank-you message for About Me / Experience)
     function closeWindow(windowId) {
       const el = document.getElementById(windowId);
       if (!el) return;
 
       el.classList.add('hidden');
       updateTaskbar();
+
+      if (closeMessages[windowId]) {
+        showMessage(windowId);
+      }
     }
 
     // Minimize window
@@ -805,7 +895,6 @@
     function handleMobileTap(windowId) {
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTapTime;
-      // If double tap under 320ms or single touch on small screens
       if (window.innerWidth <= 768 || (tapLength < 320 && tapLength > 0)) {
         openWindow(windowId);
       }
@@ -884,7 +973,6 @@
         let startX, startY, initialLeft, initialTop;
 
         const onDragStart = (e) => {
-          // If click was on control buttons, skip dragging
           if (e.target.tagName.toLowerCase() === 'button') return;
           if (windowEl.dataset.maximized === "true") return;
 
@@ -901,7 +989,6 @@
           initialLeft = rect.left;
           initialTop = rect.top;
 
-          // Clear centering transform if moving for first time
           windowEl.style.transform = 'none';
           windowEl.style.left = initialLeft + 'px';
           windowEl.style.top = initialTop + 'px';
@@ -916,11 +1003,8 @@
           const dx = clientX - startX;
           const dy = clientY - startY;
 
-          let newLeft = initialLeft + dx;
-          let newTop = Math.max(0, initialTop + dy);
-
-          windowEl.style.left = `${newLeft}px`;
-          windowEl.style.top = `${newTop}px`;
+          windowEl.style.left = `${initialLeft + dx}px`;
+          windowEl.style.top = `${Math.max(0, initialTop + dy)}px`;
         };
 
         const onDragEnd = () => {
@@ -937,17 +1021,13 @@
       });
     }
 
-    // Document Ready Lifecycle Initialization
+    // Initialization: only the Welcome dialog is open on load
     document.addEventListener('DOMContentLoaded', () => {
       updateClock();
       setInterval(updateClock, 1000);
       initDraggableWindows();
-      updateTaskbar();
+      bringToFront('welcome-dialog');
     });
   </script>
 <!-- END: Vanilla JavaScript for Retro OS Interactivity -->
-
-
-
-
 </body></html>
